@@ -1,2 +1,6 @@
 .vs
+/bin/
+/BuildingBlocks/BuildingBlocks/bin/
+/src/BuildingBlocks/bin/
+/src/BuildingBlocks/obj/
 obj
