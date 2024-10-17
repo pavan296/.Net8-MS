@@ -8,20 +8,71 @@
     ".NETCoreApp,Version=v8.0": {
       "Catalog.Api/1.0.0": {
         "dependencies": {
+          "AspNetCore.HealthChecks.NpgSql": "8.0.2",
+          "AspNetCore.HealthChecks.UI.Client": "8.0.1",
+          "Basket.API": "1.0.0",
           "BuildingBlocks": "1.0.0",
           "Carter": "8.2.1",
-          "Marten": "7.29.0",
+          "Marten": "7.30.1",
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.21.0"
         },
         "runtime": {
           "Catalog.Api.dll": {}
         }
       },
+      "AspNetCore.HealthChecks.NpgSql/8.0.2": {
+        "dependencies": {
+          "Microsoft.Extensions.Diagnostics.HealthChecks": "8.0.0",
+          "Npgsql": "8.0.3"
+        },
+        "runtime": {
+          "lib/net8.0/HealthChecks.NpgSql.dll": {
+            "assemblyVersion": "8.0.2.0",
+            "fileVersion": "8.0.2.0"
+          }
+        }
+      },
+      "AspNetCore.HealthChecks.Redis/8.0.1": {
+        "dependencies": {
+          "Microsoft.Extensions.Diagnostics.HealthChecks": "8.0.0",
+          "StackExchange.Redis": "2.7.27"
+        },
+        "runtime": {
+          "lib/net6.0/HealthChecks.Redis.dll": {
+            "assemblyVersion": "8.0.1.0",
+            "fileVersion": "8.0.1.0"
+          }
+        }
+      },
+      "AspNetCore.HealthChecks.UI.Client/8.0.1": {
+        "dependencies": {
+          "AspNetCore.HealthChecks.UI.Core": "8.0.1",
+          "Microsoft.Extensions.Diagnostics.HealthChecks": "8.0.0"
+        },
+        "runtime": {
+          "lib/net8.0/HealthChecks.UI.Client.dll": {
+            "assemblyVersion": "8.0.1.0",
+            "fileVersion": "8.0.1.0"
+          }
+        }
+      },
+      "AspNetCore.HealthChecks.UI.Core/8.0.1": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.2",
+          "Microsoft.Extensions.Diagnostics.HealthChecks": "8.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/HealthChecks.UI.Core.dll": {
+            "assemblyVersion": "8.0.1.0",
+            "fileVersion": "8.0.1.0"
+          }
+        }
+      },
       "Carter/8.2.1": {
         "dependencies": {
           "Carter.Analyzers": "8.2.1",
-          "FluentValidation": "11.8.0",
-          "Microsoft.Extensions.DependencyModel": "8.0.0"
+          "FluentValidation": "11.10.0",
+          "Microsoft.Extensions.DependencyModel": "8.0.1"
         },
         "runtime": {
           "lib/net8.0/Carter.dll": {
@@ -49,14 +100,120 @@
           }
         }
       },
-      "FluentValidation/11.8.0": {
+      "FluentValidation/11.10.0": {
         "runtime": {
-          "lib/net7.0/FluentValidation.dll": {
+          "lib/net8.0/FluentValidation.dll": {
             "assemblyVersion": "11.0.0.0",
-            "fileVersion": "11.8.0.0"
+            "fileVersion": "11.10.0.0"
           }
         }
       },
+      "FluentValidation.AspNetCore/11.3.0": {
+        "dependencies": {
+          "FluentValidation": "11.10.0",
+          "FluentValidation.DependencyInjectionExtensions": "11.10.0"
+        },
+        "runtime": {
+          "lib/net6.0/FluentValidation.AspNetCore.dll": {
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.3.0.0"
+          }
+        }
+      },
+      "FluentValidation.DependencyInjectionExtensions/11.10.0": {
+        "dependencies": {
+          "FluentValidation": "11.10.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.dll": {
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.10.0.0"
+          }
+        }
+      },
+      "Google.Protobuf/3.27.0": {
+        "runtime": {
+          "lib/net5.0/Google.Protobuf.dll": {
+            "assemblyVersion": "3.27.0.0",
+            "fileVersion": "3.27.0.0"
+          }
+        }
+      },
+      "Grpc.AspNetCore/2.66.0": {
+        "dependencies": {
+          "Google.Protobuf": "3.27.0",
+          "Grpc.AspNetCore.Server.ClientFactory": "2.66.0",
+          "Grpc.Tools": "2.66.0"
+        }
+      },
+      "Grpc.AspNetCore.Server/2.66.0": {
+        "dependencies": {
+          "Grpc.Net.Common": "2.66.0"
+        },
+        "runtime": {
+          "lib/net8.0/Grpc.AspNetCore.Server.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.66.0.0"
+          }
+        }
+      },
+      "Grpc.AspNetCore.Server.ClientFactory/2.66.0": {
+        "dependencies": {
+          "Grpc.AspNetCore.Server": "2.66.0",
+          "Grpc.Net.ClientFactory": "2.66.0"
+        },
+        "runtime": {
+          "lib/net8.0/Grpc.AspNetCore.Server.ClientFactory.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.66.0.0"
+          }
+        }
+      },
+      "Grpc.Core.Api/2.66.0": {
+        "runtime": {
+          "lib/netstandard2.1/Grpc.Core.Api.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.66.0.0"
+          }
+        }
+      },
+      "Grpc.Net.Client/2.66.0": {
+        "dependencies": {
+          "Grpc.Net.Common": "2.66.0",
+          "Microsoft.Extensions.Logging.Abstractions": "8.0.2"
+        },
+        "runtime": {
+          "lib/net8.0/Grpc.Net.Client.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.66.0.0"
+          }
+        }
+      },
+      "Grpc.Net.ClientFactory/2.66.0": {
+        "dependencies": {
+          "Grpc.Net.Client": "2.66.0",
+          "Microsoft.Extensions.Http": "6.0.0"
+        },
+        "runtime": {
+          "lib/net8.0/Grpc.Net.ClientFactory.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.66.0.0"
+          }
+        }
+      },
+      "Grpc.Net.Common/2.66.0": {
+        "dependencies": {
+          "Grpc.Core.Api": "2.66.0"
+        },
+        "runtime": {
+          "lib/net8.0/Grpc.Net.Common.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.66.0.0"
+          }
+        }
+      },
+      "Grpc.Tools/2.66.0": {},
       "Humanizer.Core/2.14.1": {
         "runtime": {
           "lib/net6.0/Humanizer.dll": {
@@ -79,7 +236,7 @@
       },
       "JasperFx.Core/1.7.2": {
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.2"
         },
         "runtime": {
           "lib/net8.0/JasperFx.Core.dll": {
@@ -94,7 +251,7 @@
           "Microsoft.CodeAnalysis": "4.8.0",
           "Microsoft.CodeAnalysis.CSharp": "4.8.0",
           "Microsoft.CodeAnalysis.Scripting": "4.8.0",
-          "Microsoft.Extensions.Logging.Abstractions": "8.0.0"
+          "Microsoft.Extensions.Logging.Abstractions": "8.0.2"
         },
         "runtime": {
           "lib/net8.0/JasperFx.RuntimeCompiler.dll": {
@@ -122,33 +279,33 @@
           }
         }
       },
-      "Marten/7.29.0": {
+      "Marten/7.30.1": {
         "dependencies": {
           "JasperFx.CodeGeneration": "3.5.3",
           "JasperFx.Core": "1.7.2",
           "JasperFx.RuntimeCompiler": "3.5.3",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.2",
           "Microsoft.Extensions.Hosting.Abstractions": "8.0.0",
-          "Microsoft.Extensions.Logging.Abstractions": "8.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "8.0.2",
           "Newtonsoft.Json": "13.0.3",
           "Npgsql.Json.NET": "8.0.0",
           "OpenTelemetry.Api": "1.8.0",
           "Polly.Core": "8.3.1",
           "System.Text.Json": "8.0.4",
           "System.Threading.Tasks.Dataflow": "8.0.0",
-          "Weasel.Postgresql": "7.11.2"
+          "Weasel.Postgresql": "7.11.4"
         },
         "runtime": {
           "lib/net8.0/Marten.dll": {
-            "assemblyVersion": "7.29.0.0",
-            "fileVersion": "7.29.0.0"
+            "assemblyVersion": "7.30.1.0",
+            "fileVersion": "7.30.1.0"
           }
         }
       },
       "MediatR/12.4.1": {
         "dependencies": {
           "MediatR.Contracts": "2.0.1",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.2"
         },
         "runtime": {
           "lib/net6.0/MediatR.dll": {
@@ -618,31 +775,72 @@
         }
       },
       "Microsoft.CSharp/4.7.0": {},
+      "Microsoft.Extensions.Caching.Abstractions/8.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "8.0.0"
+        }
+      },
+      "Microsoft.Extensions.Caching.StackExchangeRedis/8.0.10": {
+        "dependencies": {
+          "Microsoft.Extensions.Caching.Abstractions": "8.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "8.0.2",
+          "Microsoft.Extensions.Options": "8.0.2",
+          "StackExchange.Redis": "2.7.27"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.Caching.StackExchangeRedis.dll": {
+            "assemblyVersion": "8.0.10.0",
+            "fileVersion": "8.0.1024.46804"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration.Abstractions/8.0.0": {
         "dependencies": {
           "Microsoft.Extensions.Primitives": "8.0.0"
         }
       },
-      "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.0": {},
-      "Microsoft.Extensions.DependencyModel/8.0.0": {
+      "Microsoft.Extensions.DependencyInjection/6.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.2",
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.2": {
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.1024.46610"
+          }
+        }
+      },
+      "Microsoft.Extensions.DependencyModel/8.0.1": {
         "dependencies": {
           "System.Text.Encodings.Web": "8.0.0",
           "System.Text.Json": "8.0.4"
         },
         "runtime": {
           "lib/net8.0/Microsoft.Extensions.DependencyModel.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.23.53103"
+            "assemblyVersion": "8.0.0.1",
+            "fileVersion": "8.0.724.31311"
           }
         }
       },
       "Microsoft.Extensions.Diagnostics.Abstractions/8.0.0": {
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0",
-          "Microsoft.Extensions.Options": "8.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.2",
+          "Microsoft.Extensions.Options": "8.0.2",
           "System.Diagnostics.DiagnosticSource": "8.0.0"
         }
       },
+      "Microsoft.Extensions.Diagnostics.HealthChecks/8.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions": "8.0.0",
+          "Microsoft.Extensions.Hosting.Abstractions": "8.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "8.0.2",
+          "Microsoft.Extensions.Options": "8.0.2"
+        }
+      },
+      "Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions/8.0.0": {},
       "Microsoft.Extensions.FileProviders.Abstractions/8.0.0": {
         "dependencies": {
           "Microsoft.Extensions.Primitives": "8.0.0"
@@ -651,21 +849,50 @@
       "Microsoft.Extensions.Hosting.Abstractions/8.0.0": {
         "dependencies": {
           "Microsoft.Extensions.Configuration.Abstractions": "8.0.0",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.2",
           "Microsoft.Extensions.Diagnostics.Abstractions": "8.0.0",
           "Microsoft.Extensions.FileProviders.Abstractions": "8.0.0",
-          "Microsoft.Extensions.Logging.Abstractions": "8.0.0"
+          "Microsoft.Extensions.Logging.Abstractions": "8.0.2"
         }
       },
-      "Microsoft.Extensions.Logging.Abstractions/8.0.0": {
+      "Microsoft.Extensions.Http/6.0.0": {
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.2",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "8.0.2",
+          "Microsoft.Extensions.Options": "8.0.2"
         }
       },
-      "Microsoft.Extensions.Options/8.0.0": {
+      "Microsoft.Extensions.Logging/6.0.0": {
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0",
+          "Microsoft.Extensions.DependencyInjection": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.2",
+          "Microsoft.Extensions.Logging.Abstractions": "8.0.2",
+          "Microsoft.Extensions.Options": "8.0.2",
+          "System.Diagnostics.DiagnosticSource": "8.0.0"
+        }
+      },
+      "Microsoft.Extensions.Logging.Abstractions/8.0.2": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.2"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.Logging.Abstractions.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.1024.46610"
+          }
+        }
+      },
+      "Microsoft.Extensions.Options/8.0.2": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.2",
           "Microsoft.Extensions.Primitives": "8.0.0"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.Options.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.224.6711"
+          }
         }
       },
       "Microsoft.Extensions.Primitives/8.0.0": {},
@@ -702,7 +929,7 @@
       },
       "Npgsql/8.0.3": {
         "dependencies": {
-          "Microsoft.Extensions.Logging.Abstractions": "8.0.0"
+          "Microsoft.Extensions.Logging.Abstractions": "8.0.2"
         },
         "runtime": {
           "lib/net8.0/Npgsql.dll": {
@@ -747,11 +974,46 @@
           }
         }
       },
+      "Pipelines.Sockets.Unofficial/2.2.8": {
+        "dependencies": {
+          "System.IO.Pipelines": "7.0.0"
+        },
+        "runtime": {
+          "lib/net5.0/Pipelines.Sockets.Unofficial.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "2.2.8.1080"
+          }
+        }
+      },
       "Polly.Core/8.3.1": {
         "runtime": {
           "lib/net8.0/Polly.Core.dll": {
             "assemblyVersion": "8.0.0.0",
             "fileVersion": "8.3.1.3207"
+          }
+        }
+      },
+      "Scrutor/5.0.1": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.2",
+          "Microsoft.Extensions.DependencyModel": "8.0.1"
+        },
+        "runtime": {
+          "lib/net8.0/Scrutor.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.0.0"
+          }
+        }
+      },
+      "StackExchange.Redis/2.7.27": {
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "8.0.2",
+          "Pipelines.Sockets.Unofficial": "2.2.8"
+        },
+        "runtime": {
+          "lib/net6.0/StackExchange.Redis.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.7.27.49176"
           }
         }
       },
@@ -839,32 +1101,52 @@
       },
       "System.Threading.Channels/7.0.0": {},
       "System.Threading.Tasks.Dataflow/8.0.0": {},
-      "Weasel.Core/7.11.2": {
+      "Weasel.Core/7.11.4": {
         "dependencies": {
           "JasperFx.Core": "1.7.2"
         },
         "runtime": {
           "lib/net8.0/Weasel.Core.dll": {
-            "assemblyVersion": "7.11.2.0",
-            "fileVersion": "7.11.2.0"
+            "assemblyVersion": "7.11.4.0",
+            "fileVersion": "7.11.4.0"
           }
         }
       },
-      "Weasel.Postgresql/7.11.2": {
+      "Weasel.Postgresql/7.11.4": {
         "dependencies": {
           "Npgsql": "8.0.3",
           "Npgsql.NetTopologySuite": "8.0.3",
-          "Weasel.Core": "7.11.2"
+          "Weasel.Core": "7.11.4"
         },
         "runtime": {
           "lib/net8.0/Weasel.Postgresql.dll": {
-            "assemblyVersion": "7.11.2.0",
-            "fileVersion": "7.11.2.0"
+            "assemblyVersion": "7.11.4.0",
+            "fileVersion": "7.11.4.0"
           }
+        }
+      },
+      "Basket.API/1.0.0": {
+        "dependencies": {
+          "AspNetCore.HealthChecks.NpgSql": "8.0.2",
+          "AspNetCore.HealthChecks.Redis": "8.0.1",
+          "AspNetCore.HealthChecks.UI.Client": "8.0.1",
+          "BuildingBlocks": "1.0.0",
+          "Carter": "8.2.1",
+          "Grpc.AspNetCore": "2.66.0",
+          "Marten": "7.30.1",
+          "Microsoft.Extensions.Caching.StackExchangeRedis": "8.0.10",
+          "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.21.0",
+          "Scrutor": "5.0.1"
+        },
+        "runtime": {
+          "Basket.API.dll": {}
         }
       },
       "BuildingBlocks/1.0.0": {
         "dependencies": {
+          "FluentValidation": "11.10.0",
+          "FluentValidation.AspNetCore": "11.3.0",
+          "FluentValidation.DependencyInjectionExtensions": "11.10.0",
           "Mapster": "7.4.0",
           "MediatR": "12.4.1"
         },
@@ -879,6 +1161,34 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "AspNetCore.HealthChecks.NpgSql/8.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1R0JGr80PkUd0I2HWaunAFcaMPJDhD1qMLYWEIVBkFRdSXrw7KkI5ooJ1hePqk0p/a2IWaqW3+CuxN3qv+yhQA==",
+      "path": "aspnetcore.healthchecks.npgsql/8.0.2",
+      "hashPath": "aspnetcore.healthchecks.npgsql.8.0.2.nupkg.sha512"
+    },
+    "AspNetCore.HealthChecks.Redis/8.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-45jqq4ydvmm7yKpTf0jEpUuYloe2vlytN9dasmqwmQyorpNbjdvWuyvSmjVZM5nBa5e5ryF5MU+F7bXv6Zp2vQ==",
+      "path": "aspnetcore.healthchecks.redis/8.0.1",
+      "hashPath": "aspnetcore.healthchecks.redis.8.0.1.nupkg.sha512"
+    },
+    "AspNetCore.HealthChecks.UI.Client/8.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-nhC6KIoB/EtTbH3uGm2J6EHEUyTJuETUARFePbmrnA+zjbwsirzIVUQl46qIjvyPABhK0e7Rk+AxcRqC6zikqA==",
+      "path": "aspnetcore.healthchecks.ui.client/8.0.1",
+      "hashPath": "aspnetcore.healthchecks.ui.client.8.0.1.nupkg.sha512"
+    },
+    "AspNetCore.HealthChecks.UI.Core/8.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Vn00MOJ1I0HSqyP7Bt9v0pr0AIgbrXMjL/KFwW+sRwLRogOtep8BWGimd8XYRCbCDLrAi7VSArU02f6pEIw69w==",
+      "path": "aspnetcore.healthchecks.ui.core/8.0.1",
+      "hashPath": "aspnetcore.healthchecks.ui.core.8.0.1.nupkg.sha512"
     },
     "Carter/8.2.1": {
       "type": "package",
@@ -901,12 +1211,89 @@
       "path": "fastexpressioncompiler/4.1.0",
       "hashPath": "fastexpressioncompiler.4.1.0.nupkg.sha512"
     },
-    "FluentValidation/11.8.0": {
+    "FluentValidation/11.10.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-TiEaaYqSIAS+wXQv46LRm8Mca092XYNePD0n231Hqlkmm5FuToZoWnjI1ef/vJUxBzqR7/k2vaVQXxijNgVKRQ==",
-      "path": "fluentvalidation/11.8.0",
-      "hashPath": "fluentvalidation.11.8.0.nupkg.sha512"
+      "sha512": "sha512-qsJGSJDdZ8qiG+lVJ70PZfJHcEdq8UQZ/tZDXoj78/iHKG6lVKtMJsD11zyyv/IPc7rwqGqnFoFLTNzpo3IPYg==",
+      "path": "fluentvalidation/11.10.0",
+      "hashPath": "fluentvalidation.11.10.0.nupkg.sha512"
+    },
+    "FluentValidation.AspNetCore/11.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jtFVgKnDFySyBlPS8bZbTKEEwJZnn11rXXJ2SQnjDhZ56rQqybBg9Joq4crRLz3y0QR8WoOq4iE4piV81w/Djg==",
+      "path": "fluentvalidation.aspnetcore/11.3.0",
+      "hashPath": "fluentvalidation.aspnetcore.11.3.0.nupkg.sha512"
+    },
+    "FluentValidation.DependencyInjectionExtensions/11.10.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hIe+i6P+ZUxFh6lJOBXRs4EGE/thcub0Lpdk2FF2/JBKJUqDqE2xDnBIiqTMkpXLoekgBN0SlhJT0vpeNr1J6g==",
+      "path": "fluentvalidation.dependencyinjectionextensions/11.10.0",
+      "hashPath": "fluentvalidation.dependencyinjectionextensions.11.10.0.nupkg.sha512"
+    },
+    "Google.Protobuf/3.27.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tEaKpc+SP7I3gYW9AHozESyKkrCg8Xe7huI3Q3iUt5t8Dn29r2k1u8jyrGrD16maj/0UsQBM0MDViWEj0iynOA==",
+      "path": "google.protobuf/3.27.0",
+      "hashPath": "google.protobuf.3.27.0.nupkg.sha512"
+    },
+    "Grpc.AspNetCore/2.66.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-b4V5V/yiCeK94wiQReUyHPB/Xj/fCaDWhlcFnYzSCm3pQtyADAN9t3g7V631PzLjFZQnPn9iIN3M6BHnVx3nfA==",
+      "path": "grpc.aspnetcore/2.66.0",
+      "hashPath": "grpc.aspnetcore.2.66.0.nupkg.sha512"
+    },
+    "Grpc.AspNetCore.Server/2.66.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SogFEs8bLvcRtEWMdueOJeMxiaLryvyivWtmBwz/vLtS5xlN4Zrfv+npMbn1PS4iT99AqBY+R+bRxdIFfvfeIA==",
+      "path": "grpc.aspnetcore.server/2.66.0",
+      "hashPath": "grpc.aspnetcore.server.2.66.0.nupkg.sha512"
+    },
+    "Grpc.AspNetCore.Server.ClientFactory/2.66.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-glLCZ5K8iBSzzd2eIKjMBYBApygvwJqGJ87FBJrHL4bSrnBTywCUFfLj2EckiPjvvW6SNwLtapwdY4Sj0WwWQg==",
+      "path": "grpc.aspnetcore.server.clientfactory/2.66.0",
+      "hashPath": "grpc.aspnetcore.server.clientfactory.2.66.0.nupkg.sha512"
+    },
+    "Grpc.Core.Api/2.66.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HsjsQVAHe4hqP4t4rpUnmq+MZvPdyrlPsWF4T5fbMvyP3o/lMV+KVJfDlaNH8+v0aGQTVT3EsDFufbhaWb52cw==",
+      "path": "grpc.core.api/2.66.0",
+      "hashPath": "grpc.core.api.2.66.0.nupkg.sha512"
+    },
+    "Grpc.Net.Client/2.66.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-GwkSsssXFgN9+M2U+UQWdErf61sn1iqgP+2NRBlDXATcP9vlxda0wySxd/eIL8U522+SnyFNUXlvQ5tAzGk9cA==",
+      "path": "grpc.net.client/2.66.0",
+      "hashPath": "grpc.net.client.2.66.0.nupkg.sha512"
+    },
+    "Grpc.Net.ClientFactory/2.66.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-I6HUbtcqb24OiQlbvxpBLruCxQ8wrmJ5tUtU96QK7nqyerrMLeqLDDbhotznPAnZtR8x1bJvck/Xt4fgvVo92Q==",
+      "path": "grpc.net.clientfactory/2.66.0",
+      "hashPath": "grpc.net.clientfactory.2.66.0.nupkg.sha512"
+    },
+    "Grpc.Net.Common/2.66.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YJpQpIvpo0HKlsG6SHwaieyji08qfv0DdEDIewCAA0egQY08637sHOj1netLGUhzBEsCqlGC3e92TZ2uqhxnvw==",
+      "path": "grpc.net.common/2.66.0",
+      "hashPath": "grpc.net.common.2.66.0.nupkg.sha512"
+    },
+    "Grpc.Tools/2.66.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-URTltx2E0aTGQqVW+H09AZiGR/qyQ3naHPymSG1/Ytgm8bPdjSltnsIFanbxb7rXxdYwGzLFGy82R82M1UktXg==",
+      "path": "grpc.tools/2.66.0",
+      "hashPath": "grpc.tools.2.66.0.nupkg.sha512"
     },
     "Humanizer.Core/2.14.1": {
       "type": "package",
@@ -950,12 +1337,12 @@
       "path": "mapster.core/1.2.1",
       "hashPath": "mapster.core.1.2.1.nupkg.sha512"
     },
-    "Marten/7.29.0": {
+    "Marten/7.30.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-oec1Cs0dcbxSvw23euQgsT5T0GJTffInE3qbNCZ2OB2HtF1qeRXcTCiRTZf/4m16vIglM6sYa2lj0QP4c/fhcQ==",
-      "path": "marten/7.29.0",
-      "hashPath": "marten.7.29.0.nupkg.sha512"
+      "sha512": "sha512-lYv8WnJwfkVny3JIv7kny8B3Mnf9Rl8GDkuf3W/yZl+0TYvH96/v9E7SiGojFgRmrKkK2lyjrZ8K3ysmw3liWA==",
+      "path": "marten/7.30.1",
+      "hashPath": "marten.7.30.1.nupkg.sha512"
     },
     "MediatR/12.4.1": {
       "type": "package",
@@ -1062,6 +1449,20 @@
       "path": "microsoft.csharp/4.7.0",
       "hashPath": "microsoft.csharp.4.7.0.nupkg.sha512"
     },
+    "Microsoft.Extensions.Caching.Abstractions/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3KuSxeHoNYdxVYfg2IRZCThcrlJ1XJqIXkAWikCsbm5C/bCjv7G0WoKDyuR98Q+T607QT2Zl5GsbGRkENcV2yQ==",
+      "path": "microsoft.extensions.caching.abstractions/8.0.0",
+      "hashPath": "microsoft.extensions.caching.abstractions.8.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Caching.StackExchangeRedis/8.0.10": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-60BGmEIij4UjMf6iG9hUQy6+aZC5X4UVNpJ0O/TU2Dt3z/XnNuC/vgjtpbfrhYdkeVegqFwGIHnWk/kEI4eddA==",
+      "path": "microsoft.extensions.caching.stackexchangeredis/8.0.10",
+      "hashPath": "microsoft.extensions.caching.stackexchangeredis.8.0.10.nupkg.sha512"
+    },
     "Microsoft.Extensions.Configuration.Abstractions/8.0.0": {
       "type": "package",
       "serviceable": true,
@@ -1069,19 +1470,26 @@
       "path": "microsoft.extensions.configuration.abstractions/8.0.0",
       "hashPath": "microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512"
     },
-    "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.0": {
+    "Microsoft.Extensions.DependencyInjection/6.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-cjWrLkJXK0rs4zofsK4bSdg+jhDLTaxrkXu4gS6Y7MAlCvRyNNgwY/lJi5RDlQOnSZweHqoyvgvbdvQsRIW+hg==",
-      "path": "microsoft.extensions.dependencyinjection.abstractions/8.0.0",
-      "hashPath": "microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512"
+      "sha512": "sha512-k6PWQMuoBDGGHOQTtyois2u4AwyVcIwL2LaSLlTZQm2CYcJ1pxbt6jfAnpWmzENA/wfrYRI/X9DTLoUkE4AsLw==",
+      "path": "microsoft.extensions.dependencyinjection/6.0.0",
+      "hashPath": "microsoft.extensions.dependencyinjection.6.0.0.nupkg.sha512"
     },
-    "Microsoft.Extensions.DependencyModel/8.0.0": {
+    "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-NSmDw3K0ozNDgShSIpsZcbFIzBX4w28nDag+TfaQujkXGazBm+lid5onlWoCBy4VsLxqnnKjEBbGSJVWJMf43g==",
-      "path": "microsoft.extensions.dependencymodel/8.0.0",
-      "hashPath": "microsoft.extensions.dependencymodel.8.0.0.nupkg.sha512"
+      "sha512": "sha512-3iE7UF7MQkCv1cxzCahz+Y/guQbTqieyxyaWKhrRO91itI9cOKO76OHeQDahqG4MmW5umr3CcCvGmK92lWNlbg==",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/8.0.2",
+      "hashPath": "microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512"
+    },
+    "Microsoft.Extensions.DependencyModel/8.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5Ou6varcxLBzQ+Agfm0k0pnH7vrEITYlXMDuE6s7ZHlZHz6/G8XJ3iISZDr5rfwfge6RnXJ1+Wc479mMn52vjA==",
+      "path": "microsoft.extensions.dependencymodel/8.0.1",
+      "hashPath": "microsoft.extensions.dependencymodel.8.0.1.nupkg.sha512"
     },
     "Microsoft.Extensions.Diagnostics.Abstractions/8.0.0": {
       "type": "package",
@@ -1089,6 +1497,20 @@
       "sha512": "sha512-JHYCQG7HmugNYUhOl368g+NMxYE/N/AiclCYRNlgCY9eVyiBkOHMwK4x60RYMxv9EL3+rmj1mqHvdCiPpC+D4Q==",
       "path": "microsoft.extensions.diagnostics.abstractions/8.0.0",
       "hashPath": "microsoft.extensions.diagnostics.abstractions.8.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Diagnostics.HealthChecks/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-P9SoBuVZhJPpALZmSq72aQEb9ryP67EdquaCZGXGrrcASTNHYdrUhnpgSwIipgM5oVC+dKpRXg5zxobmF9xr5g==",
+      "path": "microsoft.extensions.diagnostics.healthchecks/8.0.0",
+      "hashPath": "microsoft.extensions.diagnostics.healthchecks.8.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-AT2qqos3IgI09ok36Qag9T8bb6kHJ3uT9Q5ki6CySybFsK6/9JbvQAgAHf1pVEjST0/N4JaFaCbm40R5edffwg==",
+      "path": "microsoft.extensions.diagnostics.healthchecks.abstractions/8.0.0",
+      "hashPath": "microsoft.extensions.diagnostics.healthchecks.abstractions.8.0.0.nupkg.sha512"
     },
     "Microsoft.Extensions.FileProviders.Abstractions/8.0.0": {
       "type": "package",
@@ -1104,19 +1526,33 @@
       "path": "microsoft.extensions.hosting.abstractions/8.0.0",
       "hashPath": "microsoft.extensions.hosting.abstractions.8.0.0.nupkg.sha512"
     },
-    "Microsoft.Extensions.Logging.Abstractions/8.0.0": {
+    "Microsoft.Extensions.Http/6.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-arDBqTgFCyS0EvRV7O3MZturChstm50OJ0y9bDJvAcmEPJm0FFpFyjU/JLYyStNGGey081DvnQYlncNX5SJJGA==",
-      "path": "microsoft.extensions.logging.abstractions/8.0.0",
-      "hashPath": "microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512"
+      "sha512": "sha512-15+pa2G0bAMHbHewaQIdr/y6ag2H3yh4rd9hTXavtWDzQBkvpe2RMqFg8BxDpcQWssmjmBApGPcw93QRz6YcMg==",
+      "path": "microsoft.extensions.http/6.0.0",
+      "hashPath": "microsoft.extensions.http.6.0.0.nupkg.sha512"
     },
-    "Microsoft.Extensions.Options/8.0.0": {
+    "Microsoft.Extensions.Logging/6.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-JOVOfqpnqlVLUzINQ2fox8evY2SKLYJ3BV8QDe/Jyp21u1T7r45x/R/5QdteURMR5r01GxeJSBBUOCOyaNXA3g==",
-      "path": "microsoft.extensions.options/8.0.0",
-      "hashPath": "microsoft.extensions.options.8.0.0.nupkg.sha512"
+      "sha512": "sha512-eIbyj40QDg1NDz0HBW0S5f3wrLVnKWnDJ/JtZ+yJDFnDj90VoPuoPmFkeaXrtu+0cKm5GRAwoDf+dBWXK0TUdg==",
+      "path": "microsoft.extensions.logging/6.0.0",
+      "hashPath": "microsoft.extensions.logging.6.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Logging.Abstractions/8.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-nroMDjS7hNBPtkZqVBbSiQaQjWRDxITI8Y7XnDs97rqG3EbzVTNLZQf7bIeUJcaHOV8bca47s1Uxq94+2oGdxA==",
+      "path": "microsoft.extensions.logging.abstractions/8.0.2",
+      "hashPath": "microsoft.extensions.logging.abstractions.8.0.2.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Options/8.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dWGKvhFybsaZpGmzkGCbNNwBD1rVlWzrZKANLW/CcbFJpCEceMCGzT7zZwHOGBCbwM0SzBuceMj5HN1LKV1QqA==",
+      "path": "microsoft.extensions.options/8.0.2",
+      "hashPath": "microsoft.extensions.options.8.0.2.nupkg.sha512"
     },
     "Microsoft.Extensions.Primitives/8.0.0": {
       "type": "package",
@@ -1181,12 +1617,33 @@
       "path": "opentelemetry.api/1.8.0",
       "hashPath": "opentelemetry.api.1.8.0.nupkg.sha512"
     },
+    "Pipelines.Sockets.Unofficial/2.2.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zG2FApP5zxSx6OcdJQLbZDk2AVlN2BNQD6MorwIfV6gVj0RRxWPEp2LXAxqDGZqeNV1Zp0BNPcNaey/GXmTdvQ==",
+      "path": "pipelines.sockets.unofficial/2.2.8",
+      "hashPath": "pipelines.sockets.unofficial.2.2.8.nupkg.sha512"
+    },
     "Polly.Core/8.3.1": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-b9mMAjqXuCXFCtf/RtRPwFUkAm/sz37s7G+taDvS5EqfkJsLiWfO2xO2cSISjIgIY+88oIZTGguP6UrRGRlqzg==",
       "path": "polly.core/8.3.1",
       "hashPath": "polly.core.8.3.1.nupkg.sha512"
+    },
+    "Scrutor/5.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lODLSduex32544jZZom2bN73mg4DfyGCNdywismPv2D2Hslv4jaq1Y+apV24xTW65tDMXskZHwVFSg2xIs3jtQ==",
+      "path": "scrutor/5.0.1",
+      "hashPath": "scrutor.5.0.1.nupkg.sha512"
+    },
+    "StackExchange.Redis/2.7.27": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Uqc2OQHglqj9/FfGQ6RkKFkZfHySfZlfmbCl+hc+u2I/IqunfelQ7QJi7ZhvAJxUtu80pildVX6NPLdDaUffOw==",
+      "path": "stackexchange.redis/2.7.27",
+      "hashPath": "stackexchange.redis.2.7.27.nupkg.sha512"
     },
     "System.Collections.Immutable/7.0.0": {
       "type": "package",
@@ -1300,19 +1757,24 @@
       "path": "system.threading.tasks.dataflow/8.0.0",
       "hashPath": "system.threading.tasks.dataflow.8.0.0.nupkg.sha512"
     },
-    "Weasel.Core/7.11.2": {
+    "Weasel.Core/7.11.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-+jC6lGtj8zv2XhdIe++V7qVSbtsI5/7pFo9i5Y8RB6mV+Aj2QkZtCa1mNzmbh0iilgrLwIXVe9lTkE7mI6M5MQ==",
-      "path": "weasel.core/7.11.2",
-      "hashPath": "weasel.core.7.11.2.nupkg.sha512"
+      "sha512": "sha512-t7yc765evZHxd1tGBVft6LpQQkC1aQqs8/IfgF8fwIEV61aSdslt1gxblfqG7nhXrw0d6AcJjTHDwydLCaIKBw==",
+      "path": "weasel.core/7.11.4",
+      "hashPath": "weasel.core.7.11.4.nupkg.sha512"
     },
-    "Weasel.Postgresql/7.11.2": {
+    "Weasel.Postgresql/7.11.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-itmyhuLu/uLSQo8/0WetbcZpU5fTQ8ogITFwCaZlFpKdxSFMtT30RHyJq0pG0x2Dq3Ai77BHL0Fvj6AAFXGmzA==",
-      "path": "weasel.postgresql/7.11.2",
-      "hashPath": "weasel.postgresql.7.11.2.nupkg.sha512"
+      "sha512": "sha512-USC5dTauHZw+TNgCiq3Dh9zoRDPDHypwq2mkTcVV1fa+QOLniaSSyGbDnTur0SFPg7iA2C899i5mvKnvHLB2vQ==",
+      "path": "weasel.postgresql/7.11.4",
+      "hashPath": "weasel.postgresql.7.11.4.nupkg.sha512"
+    },
+    "Basket.API/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "BuildingBlocks/1.0.0": {
       "type": "project",

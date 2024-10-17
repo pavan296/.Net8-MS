@@ -3,4 +3,6 @@
 /BuildingBlocks/BuildingBlocks/bin/
 /src/BuildingBlocks/bin/
 /src/BuildingBlocks/obj/
+/src/services/Basket/Basket.API/bin
+/src/services/Catalog/Catalog.API/bin
 obj
