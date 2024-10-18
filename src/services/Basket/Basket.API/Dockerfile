@@ -9,11 +9,11 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["Services/Basket/Basket.API/Basket.API.csproj", "Services/Basket/Basket.API/"]
+COPY ["services/Basket/Basket.API/Basket.API.csproj", "services/Basket/Basket.API/"]
 COPY ["BuildingBlocks/BuildingBlocks/BuildingBlocks.csproj", "BuildingBlocks/BuildingBlocks/"]
-RUN dotnet restore "./Services/Basket/Basket.API/./Basket.API.csproj"
+RUN dotnet restore "./services/Basket/Basket.API/Basket.API.csproj"
 COPY . .
-WORKDIR "/src/Services/Basket/Basket.API"
+WORKDIR "/src/services/Basket/Basket.API"
 RUN dotnet build "./Basket.API.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish
